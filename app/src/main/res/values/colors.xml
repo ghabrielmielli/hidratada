@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="palmeira">#7C8C70</color>
+    <color name="alcaparra">#56593F</color>
+    <color name="doce_de_mamao">#315942</color>
+    <color name="floresta_umida">#205954</color>
+    <color name="floresta_umida_variante">#4C736F</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
