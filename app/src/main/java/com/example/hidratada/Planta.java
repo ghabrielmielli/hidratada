@@ -6,11 +6,22 @@ public class Planta {
     private Intervalo quandoMolhar;
     private boolean isHidratada;
 
-    public Planta(String nome, Intervalo quandoMolhar) {
+    public int getQuantidadeDeAgua() {
+        return quantidadeDeAgua;
+    }
+
+    public void setQuantidadeDeAgua(int quantidadeDeAgua) {
+        this.quantidadeDeAgua = quantidadeDeAgua;
+    }
+
+    private int quantidadeDeAgua; // quanto de agua deve usar pra molhar ela
+
+    public Planta(String nome, Intervalo quandoMolhar, int quantidadeDeAgua) {
         this.id = (int) Math.random() * 10000;
         this.nome = nome;
         this.quandoMolhar = quandoMolhar;
         this.isHidratada = false;
+        this.quantidadeDeAgua = quantidadeDeAgua;
     }
 
     @Override

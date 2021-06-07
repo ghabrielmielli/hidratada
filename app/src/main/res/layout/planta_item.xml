@@ -1,15 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/activity_main"
-    android:orientation="vertical"
+    android:background="@drawable/card_view_bg"
+    android:backgroundTint="@color/alcaparra"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_margin="20dp"
+    android:layout_height="wrap_content">
 
-    <TextView
+    <RelativeLayout
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/doce_de_mamao"
-        android:text="Plantinha"/>
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="48sp"
+            android:layout_height="48sp"
+            android:id="@+id/txt_icone"
+            android:textSize="24dp"
+            android:background="@drawable/circulo"
+            android:gravity="center"
+            android:textColor="@color/white"
+            tools:text="P"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_nome_planta"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            tools:text="Plantinha Filomena"
+            android:layout_toEndOf="@id/txt_icone"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/txt_icone"
+            android:layout_alignTop="@id/txt_icone"
+            />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/img_nivel_agua_1"
+            android:src="@drawable/water_outline"
+            android:layout_below="@id/txt_nome_planta"
+            android:layout_alignStart="@id/txt_nome_planta"
+            android:layout_alignLeft="@id/txt_nome_planta"
+            app:tint="@color/floresta_umida_variante" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/img_nivel_agua_2"
+            android:src="@drawable/water_outline"
+            app:tint="@color/palmeira"
+            android:layout_alignTop="@id/img_nivel_agua_1"
+            android:layout_toEndOf="@id/img_nivel_agua_1"
+            android:layout_toRightOf="@id/img_nivel_agua_1" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/img_nivel_agua_3"
+            android:src="@drawable/water_outline"
+            app:tint="@color/palmeira"
+            android:layout_alignTop="@id/img_nivel_agua_2"
+            android:layout_toEndOf="@id/img_nivel_agua_2"
+            android:layout_toRightOf="@id/img_nivel_agua_2" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/img_nivel_agua_4"
+            android:src="@drawable/water_outline"
+            app:tint="@color/palmeira"
+            android:layout_alignTop="@id/img_nivel_agua_3"
+            android:layout_toEndOf="@id/img_nivel_agua_3"
+            android:layout_toRightOf="@id/img_nivel_agua_3" />
 
-</LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
