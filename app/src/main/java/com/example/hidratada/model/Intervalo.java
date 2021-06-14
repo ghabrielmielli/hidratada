@@ -1,4 +1,4 @@
-package com.example.hidratada;
+package com.example.hidratada.model;
 
 public class Intervalo {
     private boolean isTodoDia;
