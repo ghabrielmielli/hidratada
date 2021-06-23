@@ -1,6 +1,8 @@
 package com.example.hidratada.model;
 
-public class Intervalo {
+import java.io.Serializable;
+
+public class Intervalo implements Serializable {
     private boolean isTodoDia;
     private int frequencia; // a cada x dias ou x vezes por dia
 

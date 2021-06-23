@@ -1,20 +1,14 @@
 package com.example.hidratada.model;
 
-public class Planta {
+import java.io.Serializable;
+
+public class Planta implements Serializable {
     private int id;
     private String nome;
     private Intervalo quandoMolhar;
     private boolean isHidratada;
-
-    public int getQuantidadeDeAgua() {
-        return quantidadeDeAgua;
-    }
-
-    public void setQuantidadeDeAgua(int quantidadeDeAgua) {
-        this.quantidadeDeAgua = quantidadeDeAgua;
-    }
-
     private int quantidadeDeAgua; // quanto de agua deve usar pra molhar ela
+
 
     public Planta(String nome, Intervalo quandoMolhar, int quantidadeDeAgua) {
         this.id = (int) Math.random() * 10000;
@@ -22,6 +16,13 @@ public class Planta {
         this.quandoMolhar = quandoMolhar;
         this.isHidratada = false;
         this.quantidadeDeAgua = quantidadeDeAgua;
+    }
+
+    public Planta(int id, String nome, Intervalo quandoMolhar, boolean isHidratada) {
+        this.id = id;
+        this.nome = nome;
+        this.quandoMolhar = quandoMolhar;
+        this.isHidratada = isHidratada;
     }
 
     @Override
@@ -32,13 +33,6 @@ public class Planta {
                 ", quandoMolhar=" + quandoMolhar +
                 ", isHidratada=" + isHidratada +
                 '}';
-    }
-
-    public Planta(int id, String nome, Intervalo quandoMolhar, boolean isHidratada) {
-        this.id = id;
-        this.nome = nome;
-        this.quandoMolhar = quandoMolhar;
-        this.isHidratada = isHidratada;
     }
 
     public String getNome() {
@@ -68,4 +62,14 @@ public class Planta {
     public int getId() {
         return id;
     }
+
+
+    public int getQuantidadeDeAgua() {
+        return quantidadeDeAgua;
+    }
+
+    public void setQuantidadeDeAgua(int quantidadeDeAgua) {
+        this.quantidadeDeAgua = quantidadeDeAgua;
+    }
+
 }

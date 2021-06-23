@@ -46,7 +46,7 @@
         android:onClick="addPlanta"
         android:src="@drawable/ic_baseline_add_24"
         android:tint="@color/white"
-        app:backgroundTint="@color/alcaparra"
+        app:backgroundTint="@color/floresta_umida"
         app:rippleColor="@color/doce_de_mamao"
         tools:ignore="ContentDescription" />
 
